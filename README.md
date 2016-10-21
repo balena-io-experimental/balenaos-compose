@@ -6,23 +6,29 @@ visited.
 
 ## Usage
 
-1. Setup your resinOS device. (https://resinos.io/docs/raspberrypi3/gettingstarted/)
-* Download one of the resinOS device images, in this example we use the raspberry pi 3.
-* **[Optional]** Configure the image for wifi connection, to do this you will first have to [install `rdt`](https://resinos.io/docs/raspberrypi3/gettingstarted/#install-resin-device-toolbox).
-* Power up the device and `ping resin.local` to make sure its connected to the network.
+### Setup your resinOS device.
+Head over to the getting started page of resinOS (https://resinos.io/docs/raspberrypi3/gettingstarted/)
+1. Download one of the resinOS device images, in this example we use the raspberry pi 3.
+2. **[Optional]** Configure the image for wifi connection, to do this you will first have to [install `rdt`](https://resinos.io/docs/raspberrypi3/gettingstarted/#install-resin-device-toolbox).
+3. Power up the device and `ping resin.local` to make sure its connected to the network.
 
-2. Install docker + docker compose on your laptop.
-* https://docs.docker.com/compose/install/
+### Get Docker and Docker-compose Installed
+Install docker + docker compose on your laptop, following this guide: https://docs.docker.com/compose/install/
 
-3. clone this repo:
+### Spin up the services
+1. First clone this repo:
+```
+git clone https://github.com/resin-io-playground/resinos-compose.git
+```
 
-4. Deploy your services:
+2. Deploy your services:
 From the project directory run the following.
 ```
 DOCKER_API_VERSION=1.22 DOCKER_HOST=tcp://resin.local:2375 docker-compose up
 ```
 
-4. visit resin.local:5000 in your webbrowser
+#### Profit $$$
+Point the browser on your laptop to resin.local:5000
 
 ## Warnings and Limitations.
 
